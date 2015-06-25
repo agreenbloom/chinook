@@ -29,7 +29,7 @@ SELECT COUNT (*) FROM media_types WHERE name = 'Protected MPEG-4 video file';
 ```SQL
 /* Add your answer below */
 
-SELECT * FROM tracks WHERE genre_id=16 order(unit_price) limit(1);
+SELECT * FROM tracks WHERE genre_id=16 order(unit_price) limit(1) ASC;
 
 
 3. Find the all the Artists whose names start with A.
@@ -154,6 +154,7 @@ Of course, these can be done as one or more steps.
 # Enter your answer below
 
 ```
+Artist.order("created_at DESC").limit(2)
 
 
 4. Find all the Tracks that belong to the 2 most recent Playlist.
