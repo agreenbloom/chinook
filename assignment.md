@@ -23,24 +23,26 @@ Check out [W3Schools' SQL Reference](http://www.w3schools.com/sql/sql_syntax.asp
 ```SQL
 /* Add your answer below */
 
-```
+SELECT COUNT (*) FROM media_types WHERE name = 'Protected MPEG-4 video file';
 
 2. Find the least expensive Track that has the Genre "Electronica/Dance".
 ```SQL
 /* Add your answer below */
 
-```
+SELECT * FROM tracks WHERE genre_id=16 order(unit_price) limit(1);
+
 
 3. Find the all the Artists whose names start with A.
 ```SQL
 /* Add your answer below */
 
-```
+SELECT COUNT(*) FROM artists WHERE name LIKE 'A%';
 
 4. Find all the Tracks that belong to the first Playlist.
 ```SQL
 /* Add your answer below */
 
+SELECT * FROM playlists_tracks WHERE playlist_id=1;
 ```
 
 ## Active Record Query Interface
