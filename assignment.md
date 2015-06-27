@@ -141,13 +141,13 @@ Of course, these can be done as one or more steps.
 ```ruby
 # Enter your answer below
 
-```
+Track.count(name: "Hip Hop/Rap")
 
 2. Find the most expensive Track that has the MediaType "MPEG audio file".
 ```ruby
 # Enter your answer below
 
-```
+Track.where(Media_Type_id: 1).order('unit_price DESC').first
 
 3. Find the 2 oldest Artists.
 ```ruby
@@ -155,11 +155,12 @@ Of course, these can be done as one or more steps.
 
 ```
 Artist.order("created_at DESC").limit(2)
-
+name
 
 4. Find all the Tracks that belong to the 2 most recent Playlist.
 ```ruby
 # Enter your answer below
+ptrack = Playlist.limit(2).order("Created_at DESC")
 
 ```
 
