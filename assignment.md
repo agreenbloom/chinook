@@ -160,7 +160,8 @@ name
 4. Find all the Tracks that belong to the 2 most recent Playlist.
 ```ruby
 # Enter your answer below
-ptrack = Playlist.limit(2).order("Created_at DESC")
+Playlist.limit(2).order("Created_at DESC") => Playlist_id 3 & 4
+Track.joins(:playlists).where(playlists: {id: (3 ||4)})
 
 ```
 
